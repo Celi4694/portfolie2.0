@@ -1,0 +1,111 @@
+/* De generelle css regler */
+
+@font-face {
+  font-family: "cormorant";
+  src: url("fonts/cormorant-light-webfont.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Css for index-siden */
+
+/* Mobil versionen af Index */
+
+#index #first_section {
+  background-color: #f1fbff;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+#index img {
+  width: 70%;
+  height: auto;
+
+  margin-left: 70px;
+  margin-bottom: -64px;
+}
+
+#index #first_section {
+  display: grid;
+  place-items: center;
+}
+
+#index button {
+  border-style: ridge;
+  border-color: black;
+  border-radius: 8px;
+  background-color: white;
+  padding: 7px;
+
+  animation-name: puls_kf;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes puls_kf {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#index button a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-family: cormorant;
+}
+
+#index p {
+  font-size: 1.2rem;
+  line-height: 30px;
+  font-family: cormorant;
+  text-align: center;
+}
+
+/* Desktop versionen af Index */
+
+@media (min-width: 800px) {
+  #index #first_section {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+  #index figure {
+    grid-column: 7/11;
+    grid-row: 5/11;
+  }
+
+  #index button {
+    grid-column: 2/5;
+    grid-row: 5/8;
+  }
+
+  #index button a {
+    font-size: 2.3rem;
+  }
+
+  #index p {
+    grid-column: 6/10;
+    grid-row: 2/6;
+
+    font-size: 1.8rem;
+    line-height: 50px;
+  }
+}
