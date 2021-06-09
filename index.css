@@ -24,7 +24,7 @@ img {
   background-size: cover;
   width: 100%;
   height: 100vh;
-  background-position: 48%, 10%;
+  background-position: 49%, 10%;
 }
 
 #index #first_section {
@@ -34,10 +34,9 @@ img {
 }
 
 #index button {
-  border-style: ridge;
-  border-color: yellow;
+  border-style: none;
   border-radius: 8px;
-  background-color: white;
+  background-color: #f4e993;
   padding: 7px;
 
   animation-name: puls_kf;
@@ -46,7 +45,7 @@ img {
   animation-timing-function: linear;
   animation-direction: alternate;
 
-  grid-row: 10/11;
+  grid-row: 6/9;
 }
 
 @keyframes puls_kf {
@@ -62,7 +61,7 @@ img {
 #index button a {
   text-decoration: none;
   color: black;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: cormorant;
 }
 
@@ -84,13 +83,6 @@ img {
 @media (min-width: 800px) {
   #index button a {
     font-size: 2rem;
-  }
-  #index_body {
-    margin: 1vw;
-  }
-
-  #index #first_section {
-    height: 97vh;
   }
 
   /* About-siden */
