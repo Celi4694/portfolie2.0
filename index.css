@@ -17,11 +17,35 @@ img {
   height: auto;
 }
 
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: cormorant;
+  margin-bottom: 3vw;
+  margin-top: 3vw;
+}
+h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: cormorant;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+
 p {
   font-family: cormorant;
   font-size: 0.7rem;
   line-height: 1.6;
   margin-top: 3vw;
+}
+
+footer a,
+footer p {
+  margin-top: 10vw;
+  font-family: cormorant;
+  color: black;
+  text-decoration: none;
+  text-align: center;
 }
 
 /* Mobil versionen af Index */
@@ -93,19 +117,17 @@ hr {
   margin-left: 15vw;
 }
 
-#work_body h2 {
-  font-size: 2rem;
-  text-align: center;
-  font-family: cormorant;
-  margin-bottom: 3vw;
-  margin-top: 3vw;
+#overskrift_wrapper {
+  display: grid;
+  place-items: center;
 }
-#work_body h4 {
-  font-size: 1.5rem;
-  text-align: center;
-  font-family: cormorant;
-  margin-bottom: 7vw;
-  margin-top: 15vw;
+
+.overskrift {
+  background-image: linear-gradient(to right, #fceb7d, #f1fbff);
+  width: 70%;
+  height: fit-content;
+  margin-top: 30vw;
+  margin-bottom: 5vw;
 }
 
 /* Mobil versionen af WORK - første sektion */
@@ -167,14 +189,31 @@ hr {
   #work .col_down {
     padding: 2vw 2vw 0vw 2vw;
   }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  h4 {
+    font-size: 1.7rem;
+  }
 }
 /* Desktop versionen */
 
 @media (min-width: 800px) {
+  p {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+
   /* Index-siden */
   #index button a {
     font-size: 2rem;
   }
+
+  /* WORK-siden */
 
   #work #first_section a {
     font-size: 1.4rem;
@@ -182,6 +221,11 @@ hr {
   #work .col_up,
   #work .col_down {
     padding: 3vw 2vw 0vw 2vw;
+  }
+
+  #work .section_wrapper {
+    display: flex;
+    gap: 4vw;
   }
 
   /* Tilføjer navigationen på desktop-versionen */
