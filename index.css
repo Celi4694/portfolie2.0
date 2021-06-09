@@ -17,10 +17,17 @@ img {
   height: auto;
 }
 
+p {
+  font-family: cormorant;
+  font-size: 0.7rem;
+  line-height: 1.6;
+  margin-top: 3vw;
+}
+
 /* Mobil versionen af Index */
 
 #index #first_section {
-  background-image: url(billeder/forside.jpg);
+  background-image: url(billeder/forside.webp);
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -65,29 +72,102 @@ img {
   font-family: cormorant;
 }
 
-/* Mobil versionen af work */
-/* Placer baggrundsbillede */
+/* Mobil versionen af WORK */
 
-#work_body {
-  background-image: url(billeder/moon.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: 50% 20%;
+/* Fjerner navigationen på mobilversionen */
+#work_body .nav_col_right a,
+#work_body .nav_col_left a,
+hr {
+  display: none;
+}
+/* Tilføjer knap til forsiden */
+.signatur {
+  width: 10vw;
+  position: fixed;
+  margin-top: 1vw;
+  margin-left: 3vw;
+}
+/* Mobil versionen af WORK - generelle ting */
+#work_body section {
+  margin-right: 15vw;
+  margin-left: 15vw;
+}
+
+#work_body h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: cormorant;
+  margin-bottom: 3vw;
+  margin-top: 3vw;
+}
+#work_body h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: cormorant;
+  margin-bottom: 7vw;
+  margin-top: 15vw;
+}
+
+/* Mobil versionen af WORK - første sektion */
+
+#work_body #first_section {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+}
+
+#work .col_up {
+  background-image: linear-gradient(to right, #fceb7d, #f1fbff);
+  width: 100%;
+  height: 8vw;
+  display: flex;
+  gap: 3vw;
+  place-content: space-between;
+  padding: 1vw 2vw 0vw 2vw;
+  grid-column: 1/7;
+  grid-row: 2/3;
+}
+
+#work .col_down {
+  background-image: linear-gradient(to right, #fceb7d, #f1fbff);
+  width: 100%;
+  height: 8vw;
+  display: flex;
+  gap: 3vw;
+  place-content: space-between;
+  padding: 1vw 2vw 0vw 2vw;
+  grid-column: 1/7;
+  grid-row: 3/4;
+}
+
+#work #first_section figure {
+  width: 100%;
+  height: auto;
+  grid-column: 2/6;
+  grid-row: 1/5;
 }
 
 /* Tekt */
 #work #first_section a {
   color: black;
   text-decoration: underline;
-  font-size: 1.3rem;
-}
-#work_body h2 {
-  font-size: 3rem;
-  margin-bottom: 16vw;
-  margin-top: 4vw;
+  font-size: 0.6rem;
+  font-family: cormorant;
 }
 
+/* Mobil versionen af WORK - andre sektions */
+
+/* Ipad versionen */
+@media (min-width: 500px) {
+  #work #first_section a {
+    font-size: 0.9rem;
+  }
+  #work .col_up,
+  #work .col_down {
+    padding: 2vw 2vw 0vw 2vw;
+  }
+}
 /* Desktop versionen */
 
 @media (min-width: 800px) {
@@ -96,55 +176,48 @@ img {
     font-size: 2rem;
   }
 
-  /* Om-siden */
-
-  /* Grid og placering */
-  #work_body {
-    font-family: cormorant;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(14, 1fr);
+  #work #first_section a {
+    font-size: 1.4rem;
   }
-
-  #work {
-    text-align: center;
-    grid-column: 2/9;
-    grid-row: 1/8;
-  }
-
-  #work .col_up {
-    background-image: linear-gradient(to right, #fceb7d, #f1fbff);
-    display: flex;
-    gap: 3vw;
-    place-content: space-between;
-    padding: 4vw 8vw 4vw 8vw;
-  }
-
+  #work .col_up,
   #work .col_down {
-    background-image: linear-gradient(to right, #fceb7d, #f1fbff);
-    display: flex;
-    gap: 2vw;
-    place-content: space-between;
-    padding: 4vw 8vw 4vw 8vw;
-    margin-top: 5vw;
-  }
-  #work_body .col_right_top {
-    grid-column: 9/10;
-    grid-row: 2/3;
-    transform: rotate(90deg);
-    margin-top: 5vw;
-    position: sticky;
-  }
-  #work_body .col_left_top {
-    grid-column: 1/2;
-    grid-row: 7/8;
-    transform: rotate(-90deg);
-    margin-bottom: 5vw;
-    position: sticky;
+    padding: 3vw 2vw 0vw 2vw;
   }
 
-  #work_body .col_right_top a,
-  #work_body .col_left_top a {
+  /* Tilføjer navigationen på desktop-versionen */
+  #work_body .nav_col_right a,
+  #work_body .nav_col_left a,
+  hr {
+    display: revert;
+  }
+
+  /* Navigationen */
+
+  .signatur {
+    width: 8vw;
+  }
+
+  #work_body .nav_col_right {
+    transform: rotate(90deg);
+    position: fixed;
+    right: 0;
+    margin-top: 10vw;
+    margin-right: 4vw;
+
+    font-family: cormorant;
+  }
+
+  #work_body .nav_col_left {
+    transform: rotate(-90deg);
+    position: fixed;
+    margin-top: 42vw;
+    margin-left: 4vw;
+
+    font-family: cormorant;
+  }
+
+  #work_body .nav_col_right a,
+  #work_body .nav_col_left a {
     text-decoration: none;
     color: black;
     font-size: 1rem;
