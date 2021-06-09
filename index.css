@@ -65,27 +65,92 @@ img {
   font-family: cormorant;
 }
 
-/* Mobil versionen af About */
-#about #first_section {
+/* Mobil versionen af work */
+/* Placer baggrundsbillede */
+
+#work_body {
   background-image: url(billeder/moon.png);
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  background-position: 49%, 10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50% 20%;
+}
+
+/* Tekt */
+#work #first_section a {
+  color: black;
+  text-decoration: underline;
+  font-size: 1.3rem;
+}
+#work_body h2 {
+  font-size: 3rem;
+  margin-bottom: 16vw;
+  margin-top: 4vw;
 }
 
 /* Desktop versionen */
 
-/* Index-siden */
-
 @media (min-width: 800px) {
+  /* Index-siden */
   #index button a {
     font-size: 2rem;
   }
 
-  #about_body {
-    background-color: black;
-    margin-left: 15vw;
-    margin-right: 15vw;
+  /* Om-siden */
+
+  /* Grid og placering */
+  #work_body {
+    font-family: cormorant;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+  }
+
+  #work {
+    text-align: center;
+    grid-column: 2/9;
+    grid-row: 1/8;
+  }
+
+  #work .col_up {
+    background-image: linear-gradient(to right, #fceb7d, #f1fbff);
+    display: flex;
+    gap: 3vw;
+    place-content: space-between;
+    padding: 4vw 8vw 4vw 8vw;
+  }
+
+  #work .col_down {
+    background-image: linear-gradient(to right, #fceb7d, #f1fbff);
+    display: flex;
+    gap: 2vw;
+    place-content: space-between;
+    padding: 4vw 8vw 4vw 8vw;
+    margin-top: 5vw;
+  }
+  #work_body .col_right_top {
+    grid-column: 9/10;
+    grid-row: 2/3;
+    transform: rotate(90deg);
+    margin-top: 5vw;
+    position: sticky;
+  }
+  #work_body .col_left_top {
+    grid-column: 1/2;
+    grid-row: 7/8;
+    transform: rotate(-90deg);
+    margin-bottom: 5vw;
+    position: sticky;
+  }
+
+  #work_body .col_right_top a,
+  #work_body .col_left_top a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+  }
+
+  hr {
+    margin-top: 10px;
   }
 }
