@@ -68,6 +68,15 @@ footer p {
   margin-left: 3vw;
 }
 
+/* Fjerner navigationen på mobilversionen */
+#work_body .nav_col_right a,
+#work_body .nav_col_left a,
+#about_body .nav_col_right a,
+#about_body .nav_col_left a,
+hr {
+  display: none;
+}
+
 /* burgermenuen */
 
 header {
@@ -180,17 +189,6 @@ nav #menu {
   font-family: cormorant;
 }
 
-/* Mobil versionen af WORK */
-
-/* Fjerner navigationen på mobilversionen */
-#work_body .nav_col_right a,
-#work_body .nav_col_left a,
-#about_body .nav_col_right a,
-#about_body .nav_col_left a,
-hr {
-  display: none;
-}
-
 /* Mobil versionen af WORK - generelle ting */
 
 #overskrift_wrapper {
@@ -259,8 +257,6 @@ hr {
   font-family: cormorant;
 }
 
-/* Mobil versionen af WORK - andre sektions */
-
 /* Ipad versionen */
 @media (min-width: 500px) {
   html {
@@ -268,7 +264,8 @@ hr {
     scroll-padding-top: 100px;
   }
 
-  #work #first_section a {
+  #work #first_section a,
+  #about #first_section a {
     font-size: 0.9rem;
   }
   #work .col_up,
@@ -292,26 +289,6 @@ hr {
   }
   h4 {
     font-size: 2rem;
-  }
-
-  /* Index-siden */
-  #index button a {
-    font-size: 2rem;
-  }
-
-  /* WORK-siden */
-
-  #work #first_section a {
-    font-size: 1.4rem;
-  }
-  #work .col_up,
-  #work .col_down {
-    padding: 3vw 2vw 0vw 2vw;
-  }
-
-  #work .section_wrapper {
-    display: flex;
-    gap: 4vw;
   }
 
   /* Tilføjer navigationen på desktop-versionen */
@@ -356,7 +333,8 @@ hr {
   }
 
   #work_body .nav_col_right a,
-  #work_body .nav_col_left a #about_body .nav_col_right a,
+  #work_body .nav_col_left a,
+  #about_body .nav_col_right a,
   #about_body .nav_col_left a {
     text-decoration: none;
     color: black;
@@ -365,5 +343,25 @@ hr {
 
   hr {
     margin-top: 10px;
+  }
+
+  /* Index-siden */
+  #index button a {
+    font-size: 2rem;
+  }
+
+  /* WORK-siden */
+
+  #work #first_section a {
+    font-size: 1.4rem;
+  }
+  #work .col_up,
+  #work .col_down {
+    padding: 3vw 2vw 0vw 2vw;
+  }
+
+  #work .section_wrapper {
+    display: flex;
+    gap: 4vw;
   }
 }
