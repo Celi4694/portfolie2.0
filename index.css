@@ -1,4 +1,4 @@
-/* De generelle css regler */
+/* De generelle css regler, der gælder for alt (pånær forsiden) */
 
 @font-face {
   font-family: "cormorant";
@@ -36,7 +36,6 @@ p {
   font-family: cormorant;
   font-size: 0.7rem;
   line-height: 1.6;
-  margin-top: 3vw;
 }
 
 footer a,
@@ -46,6 +45,27 @@ footer p {
   color: black;
   text-decoration: none;
   text-align: center;
+}
+
+#work #first_section figure,
+#about #first_section figure {
+  width: 100%;
+  height: auto;
+  grid-column: 2/6;
+  grid-row: 1/5;
+}
+
+#work_body section,
+#about_body section {
+  margin-right: 15vw;
+  margin-left: 15vw;
+}
+
+/* Tilføjer knap til forsiden */
+.signatur {
+  width: 10vw;
+  position: fixed;
+  margin-left: 3vw;
 }
 
 /* burgermenuen */
@@ -165,20 +185,13 @@ nav #menu {
 /* Fjerner navigationen på mobilversionen */
 #work_body .nav_col_right a,
 #work_body .nav_col_left a,
+#about_body .nav_col_right a,
+#about_body .nav_col_left a,
 hr {
   display: none;
 }
-/* Tilføjer knap til forsiden */
-.signatur {
-  width: 10vw;
-  position: fixed;
-  margin-left: 3vw;
-}
+
 /* Mobil versionen af WORK - generelle ting */
-#work_body section {
-  margin-right: 15vw;
-  margin-left: 15vw;
-}
 
 #overskrift_wrapper {
   display: grid;
@@ -206,7 +219,8 @@ hr {
 
 /* Mobil versionen af WORK - første sektion */
 
-#work_body #first_section {
+#work_body #first_section,
+#about_body #first_section {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -235,13 +249,6 @@ hr {
   padding: 1vw 2vw 0vw 2vw;
   grid-column: 1/7;
   grid-row: 3/4;
-}
-
-#work #first_section figure {
-  width: 100%;
-  height: auto;
-  grid-column: 2/6;
-  grid-row: 1/5;
 }
 
 /* Tekt */
@@ -310,6 +317,8 @@ hr {
   /* Tilføjer navigationen på desktop-versionen */
   #work_body .nav_col_right a,
   #work_body .nav_col_left a,
+  #about_body .nav_col_right a,
+  #about_body .nav_col_left a,
   hr {
     display: revert;
   }
@@ -325,7 +334,8 @@ hr {
     width: 8vw;
   }
 
-  #work_body .nav_col_right {
+  #work_body .nav_col_right,
+  #about_body .nav_col_right {
     transform: rotate(90deg);
     position: fixed;
     right: 0;
@@ -335,7 +345,8 @@ hr {
     font-family: cormorant;
   }
 
-  #work_body .nav_col_left {
+  #work_body .nav_col_left,
+  #about_body .nav_col_left {
     transform: rotate(-90deg);
     position: fixed;
     margin-top: 42vw;
@@ -345,7 +356,8 @@ hr {
   }
 
   #work_body .nav_col_right a,
-  #work_body .nav_col_left a {
+  #work_body .nav_col_left a #about_body .nav_col_right a,
+  #about_body .nav_col_left a {
     text-decoration: none;
     color: black;
     font-size: 1rem;
