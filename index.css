@@ -48,6 +48,70 @@ footer p {
   text-align: center;
 }
 
+/* burgermenuen */
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+header nav {
+  text-align: right;
+  background-color: white;
+}
+
+header a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  margin: 0.3rem;
+  font-family: cormorant;
+  text-decoration: none;
+  color: black;
+}
+
+nav #menu {
+  gap: 1rem;
+  margin: 0;
+  padding: 0.5rem;
+  transform: none;
+  list-style: none;
+
+  border-top: 1px solid var(--color7);
+
+  margin-top: 0.5rem;
+  flex-basis: 100%;
+}
+
+#menuknap {
+  font-family: cormorant;
+  border: none;
+
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 3vw;
+  margin-top: 3vw;
+  background: white;
+}
+
+#menuknap:hover {
+  color: #fceb7d;
+}
+
+#menu li a:hover {
+  color: #fceb7d;
+}
+
+#menu li {
+  white-space: nowrap;
+}
+
+.hidden {
+  display: none;
+}
+
 /* Mobil versionen af Index */
 
 #index #first_section {
@@ -108,7 +172,6 @@ hr {
 .signatur {
   width: 10vw;
   position: fixed;
-  margin-top: 1vw;
   margin-left: 3vw;
 }
 /* Mobil versionen af WORK - generelle ting */
@@ -249,6 +312,11 @@ hr {
   #work_body .nav_col_left a,
   hr {
     display: revert;
+  }
+
+  /* Fjerner burgermenuen på desktop-versionen */
+  header {
+    display: none;
   }
 
   /* Navigationen */
