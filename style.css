@@ -38,13 +38,20 @@ p {
   line-height: 1.6;
 }
 
-footer a,
-footer p {
-  margin-bottom: 2vw;
-  font-family: cormorant;
-  color: black;
-  text-decoration: none;
-  text-align: center;
+footer img {
+  max-width: 20px;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1vw;
+}
+
+footer figure {
+  display: flex;
+  gap: 4vw;
 }
 
 #work #first_section figure,
@@ -262,6 +269,11 @@ nav #menu {
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+  }
+
+  footer img {
+    max-width: 40px;
+    height: auto;
   }
 
   #work #first_section a,
