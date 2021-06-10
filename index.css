@@ -41,7 +41,7 @@ p {
 
 footer a,
 footer p {
-  margin-top: 10vw;
+  margin-bottom: 2vw;
   font-family: cormorant;
   color: black;
   text-decoration: none;
@@ -126,8 +126,19 @@ hr {
   background-image: linear-gradient(to right, #fceb7d, #f1fbff);
   width: 70%;
   height: fit-content;
-  margin-top: 30vw;
-  margin-bottom: 5vw;
+  margin-top: 5vw;
+}
+
+#work .section_wrapper {
+  margin-top: 6vw;
+}
+
+#work #second_section {
+  margin-top: 10vw;
+}
+
+#work p {
+  margin-bottom: 35vw;
 }
 
 /* Mobil versionen af WORK - første sektion */
@@ -182,6 +193,11 @@ hr {
 
 /* Ipad versionen */
 @media (min-width: 500px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
   #work #first_section a {
     font-size: 0.9rem;
   }
