@@ -270,11 +270,46 @@ nav #menu {
 #name_p {
   text-align: center;
   margin-top: 2vw;
+  margin-bottom: 5vw;
 }
 #about address {
   font-family: cormorant;
   font-size: 0.7rem;
   margin-top: 2vw;
+  margin-bottom: 5vw;
+}
+
+/* Prikkerne til kvalifikationer */
+.circle_blue {
+  height: 10px;
+  width: 10px;
+  background-color: #f1fbff;
+  border-radius: 50%;
+}
+.circle_yellow {
+  height: 10px;
+  width: 10px;
+  background-color: #fceb7d;
+  border-radius: 50%;
+}
+/* Kvalifikationsafsnit  */
+
+#about #kolonner div {
+  display: flex;
+  gap: 2vw;
+  margin-bottom: 3vw;
+}
+#about #kolonner figure {
+  margin-top: 1vw;
+}
+
+#about #third_section #overskrift_wrapper {
+  margin-top: 8vw;
+  margin-bottom: 8vw;
+}
+
+#about #third_section .col_right {
+  margin-bottom: 10vw;
 }
 
 /* Ipad versionen */
@@ -388,5 +423,18 @@ nav #menu {
   #work .section_wrapper {
     display: flex;
     gap: 4vw;
+  }
+
+  /* About-siden  */
+  /* Kvalifikationsafsnit  */
+
+  #about #kolonner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 6vw;
+    gap: 7vw;
+  }
+  #about #kolonner figure {
+    margin-top: 0.8vw;
   }
 }
