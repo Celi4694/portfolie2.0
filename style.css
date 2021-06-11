@@ -312,6 +312,11 @@ nav #menu {
   margin-bottom: 10vw;
 }
 
+#about #kolonner {
+  display: grid;
+  place-content: center;
+}
+
 /* Ipad versionen */
 @media (min-width: 500px) {
   html {
