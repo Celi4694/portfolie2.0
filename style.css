@@ -265,8 +265,15 @@ nav #menu {
 }
 
 /* Mobil versionen af ABOUT */
+
+/* Tekt */
 #name_p {
   text-align: center;
+  margin-top: 2vw;
+}
+#about address {
+  font-family: cormorant;
+  font-size: 0.7rem;
   margin-top: 2vw;
 }
 
