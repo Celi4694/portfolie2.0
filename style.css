@@ -264,6 +264,12 @@ nav #menu {
   font-family: cormorant;
 }
 
+/* Mobil versionen af ABOUT */
+#name_p {
+  text-align: center;
+  margin-top: 2vw;
+}
+
 /* Ipad versionen */
 @media (min-width: 500px) {
   html {
