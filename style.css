@@ -68,7 +68,7 @@ footer figure {
   margin-left: 15vw;
 }
 
-/* Tilføjer knap til forsiden */
+/* Tilføjer knap der går til forsiden */
 .signatur {
   width: 10vw;
   position: fixed;
@@ -280,18 +280,14 @@ nav #menu {
 }
 
 /* Prikkerne til kvalifikationer */
-.circle_blue {
+
+.circle {
   height: 10px;
   width: 10px;
-  background-color: #f1fbff;
+  background-image: linear-gradient(to right, #fceb7d, #f1fbff);
   border-radius: 50%;
 }
-.circle_yellow {
-  height: 10px;
-  width: 10px;
-  background-color: #fceb7d;
-  border-radius: 50%;
-}
+
 /* Kvalifikationsafsnit  */
 
 #about #kolonner div {
