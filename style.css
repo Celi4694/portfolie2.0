@@ -150,6 +150,13 @@ nav #menu {
 
 /* ----------------------------------Mobilversion index-siden----------------------------- */
 
+#index button a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  font-family: cormorant;
+}
+
 #index #first_section {
   background-image: url(billeder/forside.webp);
   background-size: cover;
@@ -163,7 +170,7 @@ nav #menu {
   grid-template-rows: repeat(13, 1fr);
   place-items: center;
 }
-
+/* ------------Knappen på forsiden + animation til den----------- */
 #index button {
   border-style: none;
   border-radius: 8px;
@@ -187,13 +194,6 @@ nav #menu {
   100% {
     transform: scale(1);
   }
-}
-
-#index button a {
-  text-decoration: none;
-  color: black;
-  font-size: 2rem;
-  font-family: cormorant;
 }
 
 /* ----------------------------------Mobilversion work-siden----------------------------- */
