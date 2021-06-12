@@ -1,4 +1,4 @@
-/* De generelle css regler, der gælder for alt (pånær forsiden) */
+/* ----------------------------------Mobilversion de generelle----------------------------- */
 
 @font-face {
   font-family: "cormorant";
@@ -148,7 +148,7 @@ nav #menu {
   display: none;
 }
 
-/* Mobil versionen af Index */
+/* ----------------------------------Mobilversion index-siden----------------------------- */
 
 #index #first_section {
   background-image: url(billeder/forside.webp);
@@ -196,7 +196,7 @@ nav #menu {
   font-family: cormorant;
 }
 
-/* Mobil versionen af WORK - generelle ting */
+/* ----------------------------------Mobilversion work-siden----------------------------- */
 
 #overskrift_wrapper {
   display: grid;
@@ -218,8 +218,12 @@ nav #menu {
   margin-top: 10vw;
 }
 
-#work p {
+#work .section_wrapper {
   margin-bottom: 35vw;
+}
+
+#work p {
+  margin-top: 3vw;
 }
 
 /* Mobil versionen af WORK - første sektion */
@@ -264,7 +268,7 @@ nav #menu {
   font-family: cormorant;
 }
 
-/* Mobil versionen af ABOUT */
+/* ----------------------------------Mobil-version about-siden----------------------------- */
 
 /* Tekt */
 #name_p {
@@ -313,7 +317,7 @@ nav #menu {
   place-content: center;
 }
 
-/* Ipad versionen */
+/* ----------------------------------Ipad-version----------------------------- */
 @media (min-width: 500px) {
   html {
     scroll-behavior: smooth;
@@ -325,6 +329,14 @@ nav #menu {
     height: auto;
   }
 
+  p {
+    font-size: 0.8rem;
+  }
+
+  h4 {
+    font-size: 1.7rem;
+  }
+
   #work #first_section a,
   #about #first_section a {
     font-size: 0.9rem;
@@ -333,16 +345,8 @@ nav #menu {
   #work .col_down {
     padding: 2vw 2vw 0vw 2vw;
   }
-
-  p {
-    font-size: 0.8rem;
-  }
-
-  h4 {
-    font-size: 1.7rem;
-  }
 }
-/* Desktop versionen */
+/* ----------------------------------Desktop-version----------------------------- */
 
 @media (min-width: 800px) {
   p {
@@ -350,6 +354,11 @@ nav #menu {
   }
   h4 {
     font-size: 2rem;
+  }
+
+  /* Fjerner burgermenuen på desktop-versionen */
+  header {
+    display: none;
   }
 
   /* Tilføjer navigationen på desktop-versionen */
@@ -360,12 +369,6 @@ nav #menu {
   hr {
     display: revert;
   }
-
-  /* Fjerner burgermenuen på desktop-versionen */
-  header {
-    display: none;
-  }
-
   /* Navigationen */
 
   .signatur {
@@ -426,6 +429,10 @@ nav #menu {
     gap: 4vw;
   }
 
+  #work p {
+    margin-top: 0vw;
+  }
+
   /* About-siden  */
   /* Kvalifikationsafsnit  */
 
@@ -437,5 +444,29 @@ nav #menu {
   }
   #about #kolonner figure {
     margin-top: 0.8vw;
+  }
+}
+
+/* ----------------------------------animationer----------------------------- */
+
+#moon {
+  z-index: -1;
+}
+
+.rotate {
+  animation-name: rotate_kf;
+  animation-duration: 60s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate_kf {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
