@@ -457,7 +457,7 @@ nav #menu {
   animation-name: rotate_kf;
   animation-duration: 60s;
   animation-fill-mode: both;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
