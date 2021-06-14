@@ -405,7 +405,7 @@ nav #menu {
   #about_body .nav_col_left {
     transform: rotate(-90deg);
     position: fixed;
-    margin-top: 42vw;
+    margin-top: 35vw;
     margin-left: 4vw;
 
     font-family: cormorant;
