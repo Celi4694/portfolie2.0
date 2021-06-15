@@ -17,5 +17,3 @@ function toggleMenu() {
     document.querySelector("#menuknap").textContent = "Close";
   }
 }
-
-let prevScrollpos = window.pageYOffset;
