@@ -175,6 +175,7 @@ nav #menu {
   grid-template-rows: repeat(13, 1fr);
   place-items: center;
 }
+
 /* ------------Knappen på forsiden + animation til den----------- */
 #index button {
   border-style: none;
